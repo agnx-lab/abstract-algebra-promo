@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#2a2010"/>
+      <stop offset="52%" stop-color="#0d0a05"/>
+      <stop offset="100%" stop-color="#020202"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6e4b1b"/>
+      <stop offset="32%" stop-color="#d9b25c"/>
+      <stop offset="48%" stop-color="#fff6dc"/>
+      <stop offset="62%" stop-color="#e7c574"/>
+      <stop offset="100%" stop-color="#7a5520"/>
+    </linearGradient>
+    <linearGradient id="gold-dim" x1="16" y1="48" x2="48" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5c4218"/>
+      <stop offset="50%" stop-color="#b8944f"/>
+      <stop offset="100%" stop-color="#5c4218"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- 外环：暗示群作用轨道 -->
+  <circle cx="32" cy="32" r="23.5" stroke="url(#gold-dim)" stroke-width="0.75" opacity="0.55"/>
+  <circle cx="32" cy="32" r="19.5" stroke="url(#gold-dim)" stroke-width="0.5" opacity="0.28"/>
+
+  <!-- C₆ Cayley 图：六边形骨架 + 中心辐射 -->
+  <g stroke="url(#gold)" stroke-linecap="round" filter="url(#glow)">
+    <path d="M32 15 L46.7 23.5 L46.7 40.5 L32 49 L17.3 40.5 L17.3 23.5 Z" stroke-width="1.35" fill="none" opacity="0.92"/>
+    <path d="M32 15 L32 32 M46.7 23.5 L32 32 M46.7 40.5 L32 32 M32 49 L32 32 M17.3 40.5 L32 32 M17.3 23.5 L32 32" stroke-width="0.85" opacity="0.5"/>
+    <!-- 内接三角：对称性 -->
+    <path d="M32 22 L40.2 36.5 L23.8 36.5 Z" stroke-width="1" fill="none" opacity="0.72"/>
+  </g>
+
+  <!-- 顶点：群元素 -->
+  <g fill="url(#gold)" filter="url(#glow)">
+    <circle cx="32" cy="15" r="2.35"/>
+    <circle cx="46.7" cy="23.5" r="2.35"/>
+    <circle cx="46.7" cy="40.5" r="2.35"/>
+    <circle cx="32" cy="49" r="2.35"/>
+    <circle cx="17.3" cy="40.5" r="2.35"/>
+    <circle cx="17.3" cy="23.5" r="2.35"/>
+    <circle cx="32" cy="32" r="3.1"/>
+  </g>
+
+  <!-- 中心高光 -->
+  <circle cx="31.2" cy="31.2" r="1.1" fill="#fff6dc" opacity="0.85"/>
+</svg>

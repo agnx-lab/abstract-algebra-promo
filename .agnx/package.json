@@ -1,0 +1,25 @@
+{
+  "name": "@agnx-sub/abstract-algebra-promo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agnx 外置胶水：抽象代数宣传片静态站 Guest",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node ./scripts/build.mjs"
+  },
+  "peerDependencies": {
+    "@agnx-lab/app-sdk": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-unistyles": "*"
+  },
+  "peerDependenciesMeta": {
+    "@agnx-lab/app-sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

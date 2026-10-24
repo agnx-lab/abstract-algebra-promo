@@ -1,0 +1,36 @@
+{
+  "id": "abstract-algebra-promo",
+  "name": "抽象代数",
+  "version": "1.0.0",
+  "description": "Agnx 外置子应用：抽象代数宣传片（Canvas/WebGL 动画 + 配乐）",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./.agnx/assets/icon.svg",
+  "sidecar": {
+    "supervised": false,
+    "ensureTool": ".agnx/tools/ensure-abstract-algebra-promo.mjs",
+    "stateFile": "abstract-algebra-promo.json",
+    "defaultPort": 3097
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "abstract-algebra-promo.open",
+        "title": "抽象代数宣传片"
+      }
+    ],
+    "panels": [
+      {
+        "id": "abstract-algebra-promo.main",
+        "title": "抽象代数"
+      }
+    ]
+  }
+}
